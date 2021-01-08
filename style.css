@@ -14,11 +14,11 @@ body {
 header,
 form {
     min-height: 10vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .input_btn {
     padding: 0.5rem;
@@ -59,6 +59,7 @@ form {
     border: none;
     background: #fff;
     outline: none;
+    width: 80vw;
 }
 /*form input,*/
 /*form button {*/
@@ -126,6 +127,7 @@ form button:hover {
 
 .todo_item {
     min-width: 70vw;
+    padding-left: 5px;
 }
 
 .fa-times,
