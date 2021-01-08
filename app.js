@@ -1,21 +1,29 @@
-const input = document.querySelector(".todo_input");
 const todoBtn = document.querySelector(".todo_btn");
 const list = document.querySelector(".todo_list");
+const body = document.querySelector('body');
+const form = document.querySelector('.todo_form');
 
+todoBtn.addEventListener('click', ShowHideInput);
+list.addEventListener('click', DeleteCheck);
+form.addEventListener('submit', AddTodo);
 
-todoBtn.addEventListener('click', addTodo);
-
-
-function addTodo(e) {
+function ShowHideInput(e) {
     e.preventDefault();
+    form.classList.toggle('hide')
+    todoBtn.classList.toggle('hide')
+}
+
+
+function AddTodo(e) {
+    e.preventDefault();
+    const input = document.querySelector(".todo_input");
 
     const todoDiv = document.createElement('div');
     todoDiv.classList.add('todo');
 
     const newTodo = document.createElement('li');
-    newTodo.innerText = 'ssss';
+    newTodo.innerText = input.value;
     newTodo.classList.add('todo_item');
-
     todoDiv.appendChild(newTodo);
 
     const compBtn = document.createElement('button');
@@ -24,9 +32,26 @@ function addTodo(e) {
     todoDiv.appendChild(compBtn);
 
     const trashBtn = document.createElement('button');
-    trashBtn.innerHTML = '<i class="fas fa-trash"></i>';
+    trashBtn.innerHTML = '<i class="fas fa-times"></i>';
     trashBtn.classList.add('trash_btn');
     todoDiv.appendChild(trashBtn);
 
-    list.appendChild(todoDiv);
+    if(input.value !== "") {
+        list.appendChild(todoDiv);
+    }
+
+    form.classList.toggle('hide');
+    todoBtn.classList.toggle('hide');
+    input.value = "";
+}
+
+function DeleteCheck (e){
+    const item = e.target;
+    if(item.classList[0] === "trash_btn") {
+        item.parentElement.remove();
+    }
+    if(item.classList[0] === "complete_btn") {
+        item.parentElement.classList.toggle('completed');
+    }
+
 }

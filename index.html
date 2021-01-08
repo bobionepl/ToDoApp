@@ -5,17 +5,20 @@
 	<title>Title</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header>
 		<h1>ToDo LIST</h1>
 	</header>
-	<form action="">
-		<input type="text" class="todo_input">
-		<button class="todo_btn" type="submit">
+		<button class="todo_btn">
 			<i class="fas fa-plus"></i>
 		</button>
+	<form action="" class="todo_form hide">
+		<input type="text" placeholder="type your task" class="todo_input">
+		<button class="input_btn"><i class="fas fa-plus-square"></i></button>
 	</form>
 	<div class="container">
 		<ul class="todo_list">
