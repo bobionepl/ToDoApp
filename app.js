@@ -48,7 +48,11 @@ function AddTodo(e) {
 function DeleteCheck (e){
     const item = e.target;
     if(item.classList[0] === "trash_btn") {
-        item.parentElement.remove();
+        const todo = item.parentElement;
+        todo.classList.add("removed");
+        todo.addEventListener('animationend', function (){
+            todo.remove();
+        })
     }
     if(item.classList[0] === "complete_btn") {
         item.parentElement.classList.toggle('completed');

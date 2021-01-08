@@ -140,3 +140,22 @@ form button:hover {
     opacity: 0.5;
 }
 
+/*animation*/
+.removed {
+    animation: removed-item-animation .5s cubic-bezier(.65,-0.02,.72,.29);
+}
+
+@keyframes removed-item-animation {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+
+    100% {
+        opacity: 0;
+        transform: translateX(-800px);
+    }
+}
+
+
