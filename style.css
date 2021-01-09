@@ -140,6 +140,61 @@ form button:hover {
     opacity: 0.5;
 }
 
+/*select styling*/
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #4f7c92;
+    background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+    display: none;
+}
+/* Custom Select */
+.select {
+    position: absolute;
+    right: 3px;
+    display: flex;
+    width: 50px;
+    height: 3em;
+    line-height: 3;
+    background: #4f7c92;
+    overflow: hidden;
+    border-radius: .25em;
+}
+select {
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+}
+/* Arrow */
+.select::after {
+    content: '\25BC';
+    font-size: 30px;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    padding: 0 1em;
+    background: #4f7c92;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+    color: #e27872;
+}
+
+
 /*animation*/
 .removed {
     animation: removed-item-animation .8s cubic-bezier(.65,-0.02,.72,.29);

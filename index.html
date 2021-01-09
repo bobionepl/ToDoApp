@@ -12,10 +12,18 @@
 <body>
 	<header>
 		<h1>ToDo LIST</h1>
+		<div class="select">
+			<select name="slct" id="slct">
+				<option value="all">All</option>
+				<option value="completed">Completed</option>
+				<option value="uncompleted">Uncompleted</option>
+			</select>
+		</div>
 	</header>
 		<button class="todo_btn">
 			<i class="fas fa-plus"></i>
 		</button>
+
 	<form action="" class="todo_form hide">
 		<input type="text" placeholder="type your task" class="todo_input">
 		<button class="input_btn"><i class="fas fa-plus-square"></i></button>
