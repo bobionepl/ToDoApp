@@ -2,14 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body {
     background-color: #F4F2F6;
-    min-height: 100vh;
     font-family: 'Lato', sans-serif;
+    min-height: 100vh;
 }
-
 
 header,
 form {
@@ -44,6 +44,9 @@ form {
     border-radius: 50%;
     background: #fff;
     outline: none;
+    margin: 10px;
+    box-shadow: 0 0 5px 8px rgba(182,182,182, .2);
+
 }
 
 .add_todo {
@@ -167,6 +170,8 @@ select::-ms-expand {
     background: #4f7c92;
     overflow: hidden;
     border-radius: .25em;
+    margin-right: 15px;
+
 }
 select {
     flex: 1;
