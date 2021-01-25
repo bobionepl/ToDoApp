@@ -218,4 +218,12 @@ select {
     }
 }
 
+@media(min-width: 468px) {
+    .todo_btn {
+        display: none;
+    }
+    .todo_form {
+        display: flex;
+    }
+}
 
